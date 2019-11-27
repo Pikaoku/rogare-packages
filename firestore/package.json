@@ -1,0 +1,48 @@
+{
+	"name": "@rogare/firebase",
+	"version": "0.0.2",
+	"description": "Implementation of Firebase functions for Rogare.",
+	"main": "lib",
+	"types": "lib",
+	"typings": "lib",
+	"scripts": {
+		"test": "jest --config jestconfig.json",
+		"build": "tsc",
+		"format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+		"lint": "tslint -p tsconfig.json",
+		"prepare": "npm run build",
+		"prepublishOnly": "npm test && npm run lint",
+		"preversion": "npm run lint",
+		"version": "npm run format",
+		"postversion": ""
+	},
+	"keywords": [],
+	"author": "Sean McGarrity",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/jest": "^24.0.18",
+		"@types/typescript": "^2.0.0",
+		"jest": "^24.9.0",
+		"prettier": "^1.18.2",
+		"ts-jest": "^24.1.0",
+		"tslint": "^5.20.0",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^3.6.4"
+	},
+	"files": [
+		"lib/**/*"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Pikaoku/rogare-firestore.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Pikaoku/rogare-firestore/issues"
+	},
+	"homepage": "https://github.com/Pikaoku/rogare-firestore#readme",
+	"dependencies": {
+		"firebase": "^7.4.0",
+		"rxfire": "^3.9.1",
+		"rogare": "2.3.4"
+	}
+}
